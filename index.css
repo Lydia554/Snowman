@@ -1,0 +1,219 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+  margin: 0;
+}
+.snowman {
+  display: inline-block;
+  height: auto;
+  position: absolute;
+  right: 25%;
+  top: 25%;
+  z-index: 20;
+}
+.snowman .head,
+.snowman .middle,
+.snowman .base {
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 1px #aaa;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+.snowman .head {
+  height: 100px;
+  transform: translate(25%, 5%);
+  width: 100px;
+  z-index: 15;
+}
+.snowman .head .eye {
+  background-color: #333;
+  border-radius: 50%;
+  height: 12px;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 12px;
+}
+.snowman .head .eye:first-child {
+  top: 23%;
+  left: 55%;
+}
+.snowman .head .nose {
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 65px solid orange;
+  height: 18px;
+  position: absolute;
+  top: 36%;
+  left: -25%;
+  transform: rotate(8deg);
+  width: 65px;
+}
+.snowman .head .nose:after {
+  background-color: orange;
+  border-radius: 50%;
+  content: "";
+  height: 18px;
+  position: absolute;
+  top: -5px;
+  left: 65px;
+  transform: translateX(-50%);
+  width: 10px;
+}
+.snowman .head .nose:before {
+  background-color: orange;
+  border-radius: 50%;
+  content: "";
+  height: 8px;
+  position: absolute;
+  right: 100%;
+  transform: translateX(50%);
+  width: 12px;
+}
+.snowman .head .mouth {
+  border: 5px dotted;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 22%;
+  left: -5%;
+  height: 95px;
+  transform: rotate(5deg);
+  width: 100%;
+}
+.snowman .head .hat {
+  background-color: black;
+  height: 75px;
+  position: absolute;
+  width: 80%;
+  top: -65px;
+  left: 30px;
+  transform: rotate(15deg);
+}
+.snowman .head .hat:after {
+  background-color: black;
+  content: "";
+  height: 5px;
+  position: absolute;
+  top: 100%;
+  left: 53%;
+  transform: translateX(-50%);
+  width: 150%;
+}
+.snowman .middle {
+  height: 135px;
+  margin-top: -15px;
+  transform: translate(10%, 2%);
+  width: 135px;
+  z-index: 14;
+}
+.snowman .middle .arm {
+  background-color: #5c4033;
+  height: 15px;
+  position: absolute;
+  width: 80px;
+}
+.snowman .middle .arm.left {
+  top: 50%;
+  left: 90%;
+  transform: rotate(20deg);
+}
+.snowman .middle .arm.left .hand {
+  top: 10%;
+  left: 99%;
+  transform: rotate(60deg);
+}
+.snowman .middle .arm.right {
+  top: 30%;
+  right: 96%;
+}
+.snowman .middle .arm.right .hand {
+  -webkit-animation: wave 3s infinite;
+          animation: wave 3s infinite;
+  top: 90%;
+  left: -1%;
+  transform: rotate(-140deg);
+  width: 110px;
+}
+.snowman .middle .button {
+  top: 40%;
+  left: 34%;
+}
+.snowman .middle .hand {
+  background-color: inherit;
+  height: 15px;
+  position: absolute;
+  transform-origin: top left;
+  width: 90px;
+}
+.snowman .middle .hand:before, .snowman .middle .hand:after {
+  background-color: inherit;
+  content: "";
+  position: absolute;
+}
+.snowman .middle .hand:before {
+  background-color: inherit;
+  content: "";
+  height: 10px;
+  position: absolute;
+  top: 60%;
+  left: 65%;
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 30px;
+}
+.snowman .middle .hand:after {
+  height: 10px;
+  bottom: 45%;
+  left: 50%;
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  width: 25px;
+}
+.snowman .base {
+  height: 200px;
+  margin-top: -25px;
+  width: 200px;
+}
+.snowman .base .button:first-of-type {
+  top: 13%;
+  left: 40%;
+}
+.snowman .base .button:last-of-type {
+  top: 51%;
+  left: 34%;
+}
+.snowman .button {
+  background-color: #333;
+  border-radius: 50%;
+  height: 28px;
+  position: absolute;
+  transform: rotate(10deg);
+  width: 21px;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    transform: rotate(-140deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+}
+@keyframes wave {
+  0% {
+    transform: rotate(-140deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+}
